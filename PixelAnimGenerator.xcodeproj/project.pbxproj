@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADCAA30D8634018DAB611EA6 /* Pods_PixelAnimGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4DDB14D2D9B9F8C59E374B /* Pods_PixelAnimGenerator.framework */; };
 		C0A697A320DA9C1200432BFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A697A220DA9C1200432BFC /* AppDelegate.swift */; };
 		C0A697A520DA9C1200432BFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A697A420DA9C1200432BFC /* ViewController.swift */; };
 		C0A697A820DA9C1200432BFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A697A620DA9C1200432BFC /* Main.storyboard */; };
 		C0A697AA20DA9C1300432BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A697A920DA9C1300432BFC /* Assets.xcassets */; };
 		C0A697AD20DA9C1300432BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A697AB20DA9C1300432BFC /* LaunchScreen.storyboard */; };
 		C0A697B820DA9C1400432BFC /* PixelAnimGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A697B720DA9C1400432BFC /* PixelAnimGeneratorTests.swift */; };
+		DB0E57D6247C42FF78F84332 /* Pods_PixelAnimGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3E6CEDE6AE60674B95BF62 /* Pods_PixelAnimGeneratorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F8B01141D24243EDA12568 /* Pods-PixelAnimGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelAnimGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixelAnimGenerator/Pods-PixelAnimGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		0A4DDB14D2D9B9F8C59E374B /* Pods_PixelAnimGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelAnimGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1016C9CB5A7F68AC59DCA2FA /* Pods-PixelAnimGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelAnimGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelAnimGenerator/Pods-PixelAnimGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		2A3E6CEDE6AE60674B95BF62 /* Pods_PixelAnimGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelAnimGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A19362958B557EF9E2685C5 /* Pods-PixelAnimGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelAnimGeneratorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixelAnimGeneratorTests/Pods-PixelAnimGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9BE005D91D498AC67CE5E1A /* Pods-PixelAnimGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelAnimGeneratorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelAnimGeneratorTests/Pods-PixelAnimGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0A6979F20DA9C1200432BFC /* PixelAnimGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelAnimGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A697A220DA9C1200432BFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A697A420DA9C1200432BFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADCAA30D8634018DAB611EA6 /* Pods_PixelAnimGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0E57D6247C42FF78F84332 /* Pods_PixelAnimGeneratorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		386919D696FA4F8AA45CEC0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A4DDB14D2D9B9F8C59E374B /* Pods_PixelAnimGenerator.framework */,
+				2A3E6CEDE6AE60674B95BF62 /* Pods_PixelAnimGeneratorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D66AF03BDEB74D00AA35DBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1016C9CB5A7F68AC59DCA2FA /* Pods-PixelAnimGenerator.debug.xcconfig */,
+				08F8B01141D24243EDA12568 /* Pods-PixelAnimGenerator.release.xcconfig */,
+				A9BE005D91D498AC67CE5E1A /* Pods-PixelAnimGeneratorTests.debug.xcconfig */,
+				8A19362958B557EF9E2685C5 /* Pods-PixelAnimGeneratorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C0A6979620DA9C1200432BFC = {
 			isa = PBXGroup;
 			children = (
 				C0A697A120DA9C1200432BFC /* PixelAnimGenerator */,
 				C0A697B620DA9C1400432BFC /* PixelAnimGeneratorTests */,
 				C0A697A020DA9C1200432BFC /* Products */,
+				3D66AF03BDEB74D00AA35DBD /* Pods */,
+				386919D696FA4F8AA45CEC0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0A697BC20DA9C1400432BFC /* Build configuration list for PBXNativeTarget "PixelAnimGenerator" */;
 			buildPhases = (
+				FFA1325B75024443BD7C44E8 /* [CP] Check Pods Manifest.lock */,
 				C0A6979B20DA9C1200432BFC /* Sources */,
 				C0A6979C20DA9C1200432BFC /* Frameworks */,
 				C0A6979D20DA9C1200432BFC /* Resources */,
+				F15C11A9D25ACADE1587151E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0A697BF20DA9C1400432BFC /* Build configuration list for PBXNativeTarget "PixelAnimGeneratorTests" */;
 			buildPhases = (
+				3BDDB8D8303BF57CBAD63C8F /* [CP] Check Pods Manifest.lock */,
 				C0A697AF20DA9C1400432BFC /* Sources */,
 				C0A697B020DA9C1400432BFC /* Frameworks */,
 				C0A697B120DA9C1400432BFC /* Resources */,
@@ -191,6 +226,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BDDB8D8303BF57CBAD63C8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PixelAnimGeneratorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F15C11A9D25ACADE1587151E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PixelAnimGenerator/Pods-PixelAnimGenerator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Color-Picker-for-iOS/Color_Picker_for_iOS.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Color_Picker_for_iOS.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PixelAnimGenerator/Pods-PixelAnimGenerator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFA1325B75024443BD7C44E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PixelAnimGenerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0A6979B20DA9C1200432BFC /* Sources */ = {
@@ -356,6 +448,7 @@
 		};
 		C0A697BD20DA9C1400432BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1016C9CB5A7F68AC59DCA2FA /* Pods-PixelAnimGenerator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +467,7 @@
 		};
 		C0A697BE20DA9C1400432BFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F8B01141D24243EDA12568 /* Pods-PixelAnimGenerator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +486,7 @@
 		};
 		C0A697C020DA9C1400432BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9BE005D91D498AC67CE5E1A /* Pods-PixelAnimGeneratorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,6 +508,7 @@
 		};
 		C0A697C120DA9C1400432BFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A19362958B557EF9E2685C5 /* Pods-PixelAnimGeneratorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

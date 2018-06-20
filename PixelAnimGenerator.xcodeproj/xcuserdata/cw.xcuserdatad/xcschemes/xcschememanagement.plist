@@ -7,7 +7,20 @@
 		<key>PixelAnimGenerator.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C0A6979E20DA9C1200432BFC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0A697B220DA9C1400432BFC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
