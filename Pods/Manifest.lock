@@ -1,16 +1,16 @@
 PODS:
-  - Color-Picker-for-iOS (2.0.2)
+  - SwiftHSVColorPicker (1.1.1)
 
 DEPENDENCIES:
-  - Color-Picker-for-iOS
+  - SwiftHSVColorPicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Color-Picker-for-iOS
+    - SwiftHSVColorPicker
 
 SPEC CHECKSUMS:
-  Color-Picker-for-iOS: 4980589b3e3cfe7198f227dd50be9adb02d8bc0b
+  SwiftHSVColorPicker: 69c9028dea168e0f8ee2439d31a899cf1df95678
 
-PODFILE CHECKSUM: 23bf7e07d8597a3836a0ba78b6524812c32b42f1
+PODFILE CHECKSUM: 52ebde788fb2290398cd07c821f277dc48e32fd8
 
 COCOAPODS: 1.5.2

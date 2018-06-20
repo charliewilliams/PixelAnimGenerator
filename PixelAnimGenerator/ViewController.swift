@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Color_Picker_for_iOS
+import SwiftHSVColorPicker
 
 class ViewController: UIViewController {
 
@@ -175,33 +175,18 @@ class ViewController: UIViewController {
         touchY = nil
     }
 
-    @IBAction func showColorPicker(_ sender: Any) {
-
-        /*
-         colorPickerView = [[HRColorPickerView alloc] init];
-         colorPickerView.color = self.color;
-         [colorPickerView addTarget:self
-         action:@selector(action:)
-         forControlEvents:UIControlEventValueChanged];
-         [self.view addSubview:colorPickerView];
-         */
-
-        let pickerVC = UIViewController(nibName: nil, bundle: nil)
-        let picker = HRColorPickerView(frame: .zero)
-
-        pickerVC.view.addSubview(picker)
-        picker.frame = pickerVC.view.bounds
-
-        picker.color = color
-
-        picker.addTarget(self, action: #selector(colorDidChange(to:)), for: .valueChanged)
-
-        present(pickerVC, animated: true, completion: nil)
-    }
-
     @objc func colorDidChange(to newColor: UIColor) {
 
         color = newColor
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let pickerVC = segue.destination as? ColorPickerViewController else {
+            return
+        }
+
+        pickerVC.initialColor = color
     }
 }
 

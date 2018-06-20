@@ -78,18 +78,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-V4-g3I">
-                                <rect key="frame" x="181" y="302" width="64" height="64"/>
+                                <rect key="frame" x="20" y="318" width="225" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="GTo-V4-g3I" secondAttribute="height" multiplier="1:1" id="2ZM-ZC-cET"/>
-                                    <constraint firstAttribute="height" constant="64" id="aqY-Rc-JZl"/>
+                                    <constraint firstAttribute="height" constant="32" id="aqY-Rc-JZl"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YZ-XQ-lHk">
                                 <rect key="frame" x="253" y="319" width="106" height="30"/>
                                 <state key="normal" title="Color picker &gt;&gt;"/>
                                 <connections>
-                                    <action selector="showColorPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HP5-TP-7MG"/>
+                                    <segue destination="U7K-hY-uZo" kind="show" id="h3A-uU-glZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="641-o5-8F2">
@@ -104,6 +103,7 @@
                         <constraints>
                             <constraint firstItem="641-o5-8F2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="0Zz-Kr-XNQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="641-o5-8F2" secondAttribute="bottom" constant="20" id="0en-Ra-q29"/>
+                            <constraint firstItem="GTo-V4-g3I" firstAttribute="leading" secondItem="nTp-R1-BqB" secondAttribute="leading" id="2DU-ta-9Ac"/>
                             <constraint firstItem="FXy-4s-jkU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="836-LV-2mI"/>
                             <constraint firstItem="1YZ-XQ-lHk" firstAttribute="trailing" secondItem="FXy-4s-jkU" secondAttribute="trailing" id="AUO-Y7-JDI"/>
                             <constraint firstItem="nTp-R1-BqB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ams-xh-LfA"/>
@@ -150,6 +150,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Color Picker View Controller-->
+        <scene sceneID="HFU-5W-DcP">
+            <objects>
+                <viewController id="U7K-hY-uZo" customClass="ColorPickerViewController" customModule="PixelAnimGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Jm-2z-Ess">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72D-if-ZzK" customClass="SwiftHSVColorPicker" customModule="SwiftHSVColorPicker">
+                                <rect key="frame" x="37.5" y="90" width="300" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="Xwk-Yv-GcB"/>
+                                    <constraint firstAttribute="width" constant="300" id="o0n-Ii-EIM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="72D-if-ZzK" firstAttribute="centerX" secondItem="6Jm-2z-Ess" secondAttribute="centerX" id="IrQ-Ba-6qr"/>
+                            <constraint firstItem="72D-if-ZzK" firstAttribute="top" secondItem="SEe-CN-reZ" secondAttribute="top" constant="26" id="LjJ-rm-3xP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SEe-CN-reZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="72D-if-ZzK" id="eEb-1b-cB2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yc-em-ZkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uzb-b1-3Mi">
