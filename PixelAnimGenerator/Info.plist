@@ -24,6 +24,8 @@
 	<string>LaunchScreen</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Gotta save &apos;dem photes.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Gotta save &apos;dem photes.</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

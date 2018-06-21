@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         case pen // touch writes pixels at the touch location, width from touch size slider (autofading)
         case fade // touch Y location controls momentary brightness across all pixels
         case pro // 2-touch writes pixels at the touches' centre; width controlled by distance between touches
+        case multi // multiple touches of set width, pressure = brightness & width offset
     }
 
     @IBOutlet weak var generatedImageView: UIImageView!
@@ -33,9 +34,9 @@ class ViewController: UIViewController {
         return [CGFloat](repeating: 0, count: self.pixelHeight)
     }
     var recordingTimeInterval: TimeInterval {
-        let multiplier = [1, 0.5, 0.25, 0.125][recordSpeedSegmentedControl.selectedSegmentIndex]
+        let divisor = [1, 0.5, 0.25, 0.125][recordSpeedSegmentedControl.selectedSegmentIndex]
         let baseFrameRate = 1/30.0
-        return baseFrameRate * multiplier
+        return baseFrameRate / divisor
     }
 
     var running = false {
@@ -53,11 +54,13 @@ class ViewController: UIViewController {
 
                 runTimer = nil
 
+                let image = generatedImageView.image
+
                 // ask to save
                 let sheet = UIAlertController(title: "Save image to photos?", message: nil, preferredStyle: .actionSheet)
                 sheet.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
 
-                    if let image = self.generatedImageView.image {
+                    if let image = image {
                         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                     }
                     self.reset()
@@ -78,8 +81,22 @@ class ViewController: UIViewController {
     var color: UIColor = .white {
         didSet {
             colorSwatch.backgroundColor = color
+
+            colorTable.removeAll()
+
+            var h: CGFloat = 0
+            var s: CGFloat = 0
+            var b: CGFloat = 0
+            color.getHue(&h, saturation: &s, brightness: &b, alpha: nil)
+
+            for i in 0..<256 {
+                let brightness = b * (CGFloat(i) / 255.0)
+                colorTable.append(UIColor(hue: h, saturation: s, brightness: brightness, alpha: 1))
+            }
         }
     }
+    var colorTable = [UIColor](repeating: .white, count: 256)
+
     @IBOutlet weak var colorSwatch: UIView!
 
     var touchSize: Int = 1
@@ -110,7 +127,29 @@ class ViewController: UIViewController {
         }
 
         // update display image
+        generatedImageView.image = imageFromCurrentFrames()
+    }
 
+    let onePixelSize = CGSize(width: 1, height: 1)
+
+    func imageFromCurrentFrames() -> UIImage? {
+
+        UIGraphicsBeginImageContext(CGSize(width: frames.count, height: pixelHeight))
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+
+        for (x, frame) in frames.enumerated() {
+
+            for (y, pixel) in frame.enumerated() {
+                context.setFillColor(colorTable[Int(pixel * 255)].cgColor)
+                context.addRect(CGRect(origin: CGPoint(x: x, y: y), size: onePixelSize))
+            }
+        }
+
+        context.drawPath(using: .fill)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image
     }
 
     func frameFor(_ touchY: Int) -> [CGFloat] {
@@ -118,10 +157,13 @@ class ViewController: UIViewController {
         switch inputType {
 
         case .pen, .pro:
-            return []
+            return [] // todo
 
         case .fade:
             return [CGFloat](repeating: CGFloat(touchY) * touchStepIncrement, count: pixelHeight)
+
+        case .multi:
+            return [] // todo
         }
     }
 
@@ -145,7 +187,7 @@ class ViewController: UIViewController {
     func handleTouches(_ touches: Set<UITouch>) {
 
         guard let first = touches.first,
-            touchView.frame.contains(first.location(in: touchView)) else {
+            touchView.bounds.contains(first.location(in: touchView)) else {
                 return
         }
 
