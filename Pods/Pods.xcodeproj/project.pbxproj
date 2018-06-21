@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,7 +46,7 @@
 		24F48C962D4244C92C8C21F32773B4A5 /* ColorUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorUtils.swift; path = Source/ColorUtils.swift; sourceTree = "<group>"; };
 		27D2C7DAAED99A48495FF8CD573EF556 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35384CE2723C8DAFBD07036B132D3CAC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44B426DAE2DDFC3E81A281E97D686ECB /* Pods_PixelAnimGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PixelAnimGenerator.framework; path = "Pods-PixelAnimGenerator.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B426DAE2DDFC3E81A281E97D686ECB /* Pods_PixelAnimGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelAnimGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F37F55928FFBA8143ADF6B429AA62CD /* Pods-PixelAnimGeneratorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PixelAnimGeneratorTests.modulemap"; sourceTree = "<group>"; };
 		50020F47DD20FF673D5936A3FCA09B3D /* SwiftHSVColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHSVColorPicker-prefix.pch"; sourceTree = "<group>"; };
 		530C30A8860533C1F6384A1C1D4606D5 /* Pods-PixelAnimGenerator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PixelAnimGenerator.modulemap"; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		7FCC3A4A4995BE4786CA69A1253529AE /* SwiftHSVColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftHSVColorPicker.swift; path = Source/SwiftHSVColorPicker.swift; sourceTree = "<group>"; };
 		8A68082E31F8F1DF2B24B751270D86A0 /* Pods-PixelAnimGeneratorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PixelAnimGeneratorTests-dummy.m"; sourceTree = "<group>"; };
 		8D348C359D3749C18B651373A13CD366 /* Pods-PixelAnimGeneratorTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PixelAnimGeneratorTests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		946A3761623AF0E666E6E0BCA09AFC39 /* Pods-PixelAnimGenerator-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PixelAnimGenerator-frameworks.sh"; sourceTree = "<group>"; };
 		99BE02A95FC0DBB3FCB2C061A5616770 /* Pods-PixelAnimGenerator-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PixelAnimGenerator-resources.sh"; sourceTree = "<group>"; };
 		A21759C8271E98CA0D2CFC6097CAD641 /* Pods-PixelAnimGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PixelAnimGenerator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,8 +71,8 @@
 		AF3A989D6C3A7434B0C80AE856A1E738 /* Pods-PixelAnimGeneratorTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PixelAnimGeneratorTests-resources.sh"; sourceTree = "<group>"; };
 		B155D8F05E5A0ED10A6F86EFD7ADA15E /* Pods-PixelAnimGenerator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PixelAnimGenerator-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B3A93DA9C4611987E78BE2A25677F28E /* Pods-PixelAnimGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PixelAnimGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
-		C71F7F57E5206CF2CEEF6B5CAE6EEE43 /* Pods_PixelAnimGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PixelAnimGeneratorTests.framework; path = "Pods-PixelAnimGeneratorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D87C79063FA4335C40B79A70555AA97F /* SwiftHSVColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftHSVColorPicker.framework; path = SwiftHSVColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71F7F57E5206CF2CEEF6B5CAE6EEE43 /* Pods_PixelAnimGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixelAnimGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87C79063FA4335C40B79A70555AA97F /* SwiftHSVColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHSVColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC25A312C62A23D8EE94C6713026BE0 /* SwiftHSVColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftHSVColorPicker.modulemap; sourceTree = "<group>"; };
 		DFAB9CC67FD3ADAB9802E3DB12D24761 /* Pods-PixelAnimGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PixelAnimGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		E7E7281C9646076B43A3A2A4EA4455D6 /* SwiftHSVColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHSVColorPicker-dummy.m"; sourceTree = "<group>"; };
@@ -190,7 +190,6 @@
 				7FCC3A4A4995BE4786CA69A1253529AE /* SwiftHSVColorPicker.swift */,
 				CE7101F63AE0B3A93856F028EC725D90 /* Support Files */,
 			);
-			name = SwiftHSVColorPicker;
 			path = SwiftHSVColorPicker;
 			sourceTree = "<group>";
 		};
@@ -315,7 +314,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -402,11 +401,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PixelAnimGeneratorTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PixelAnimGeneratorTests/Pods-PixelAnimGeneratorTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -540,6 +535,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -561,11 +557,7 @@
 				INFOPLIST_FILE = "Target Support Files/SwiftHSVColorPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftHSVColorPicker/SwiftHSVColorPicker.modulemap";
 				PRODUCT_MODULE_NAME = SwiftHSVColorPicker;
 				PRODUCT_NAME = SwiftHSVColorPicker;
@@ -597,11 +589,7 @@
 				INFOPLIST_FILE = "Target Support Files/SwiftHSVColorPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftHSVColorPicker/SwiftHSVColorPicker.modulemap";
 				PRODUCT_MODULE_NAME = SwiftHSVColorPicker;
 				PRODUCT_NAME = SwiftHSVColorPicker;
@@ -635,11 +623,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PixelAnimGenerator/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PixelAnimGenerator/Pods-PixelAnimGenerator.modulemap";
 				OTHER_LDFLAGS = "";
@@ -675,11 +659,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PixelAnimGeneratorTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PixelAnimGeneratorTests/Pods-PixelAnimGeneratorTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -713,11 +693,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PixelAnimGenerator/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PixelAnimGenerator/Pods-PixelAnimGenerator.modulemap";
 				OTHER_LDFLAGS = "";

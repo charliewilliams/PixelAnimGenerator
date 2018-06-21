@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentTouchSizeLabel: UILabel!
     @IBOutlet weak var touchView: UIView!
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var recordSpeedSegmentedControl: UISegmentedControl!
 
     let pixelHeight = 12
     var touchStepIncrement: CGFloat {
@@ -30,6 +31,11 @@ class ViewController: UIViewController {
     }
     var blankFrame: [CGFloat] {
         return [CGFloat](repeating: 0, count: self.pixelHeight)
+    }
+    var recordingTimeInterval: TimeInterval {
+        let multiplier = [1, 0.5, 0.25, 0.125][recordSpeedSegmentedControl.selectedSegmentIndex]
+        let baseFrameRate = 1/30.0
+        return baseFrameRate * multiplier
     }
 
     var running = false {
@@ -41,7 +47,7 @@ class ViewController: UIViewController {
 
             if running {
 
-                runTimer = Timer.scheduledTimer(timeInterval: 1/30.0, target: self, selector: #selector(runTimerFired), userInfo: nil, repeats: true)
+                runTimer = Timer.scheduledTimer(timeInterval: recordingTimeInterval, target: self, selector: #selector(runTimerFired), userInfo: nil, repeats: true)
 
             } else {
 

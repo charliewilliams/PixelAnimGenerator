@@ -142,6 +142,7 @@
                         <outlet property="currentTouchSizeLabel" destination="8Tq-Wa-il1" id="jIv-uv-gHT"/>
                         <outlet property="generatedImageView" destination="nqC-g4-XgN" id="Lg3-b4-C1Y"/>
                         <outlet property="inputTypeSegmentedControl" destination="nTp-R1-BqB" id="tUb-6N-dZb"/>
+                        <outlet property="recordSpeedSegmentedControl" destination="S8d-oW-LsG" id="hkq-fX-2fv"/>
                         <outlet property="startStopButton" destination="641-o5-8F2" id="Wtj-yb-BhY"/>
                         <outlet property="touchSizeSlider" destination="HNL-u5-YUl" id="tBV-Lp-Rcl"/>
                         <outlet property="touchView" destination="FXy-4s-jkU" id="rek-i3-Wds"/>
