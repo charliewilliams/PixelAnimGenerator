@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EE429CA12B8BB5FD2CDC99AF47EEB67 /* BrightnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C748BC136E0C77602CB03D932657C73 /* BrightnessView.swift */; };
-		1A58C0AF6D1973F3FA5703158E92E97A /* SelectedColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7680EFC44E1C8FB0318D2FB1C12F6 /* SelectedColorView.swift */; };
-		2881BCDADAEF02E34156E774AB68EF7C /* SwiftHSVColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E7281C9646076B43A3A2A4EA4455D6 /* SwiftHSVColorPicker-dummy.m */; };
+		240BEC9F8FD2FFC35CD630F959F4CD07 /* SwiftHSVColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E7281C9646076B43A3A2A4EA4455D6 /* SwiftHSVColorPicker-dummy.m */; };
 		29D27FC42E095F031C0D19B6B42B293A /* Pods-PixelAnimGenerator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A29E7430963B7F6F2438DD4E836C29E2 /* Pods-PixelAnimGenerator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D7A355816153F2CDAE18737E37451F8 /* Pods-PixelAnimGeneratorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A68082E31F8F1DF2B24B751270D86A0 /* Pods-PixelAnimGeneratorTests-dummy.m */; };
 		3FB5DF029A455D6389C11A75DD915232 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		604D8318EFD853557B2FADF8EFCF45FC /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158DBFE27FD61CB73AF69FA787974F8 /* ColorWheel.swift */; };
-		6E7C27BC35184C82D0CFBBEB023BC31F /* SwiftHSVColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC3A4A4995BE4786CA69A1253529AE /* SwiftHSVColorPicker.swift */; };
-		733ADE22764042D1DC1E57FFFBF550E0 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F48C962D4244C92C8C21F32773B4A5 /* ColorUtils.swift */; };
+		45CFF879DA2292C3BF6467CA0123A692 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158DBFE27FD61CB73AF69FA787974F8 /* ColorWheel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64C95B385C81D8B6F2C28BEBDB5DA8CD /* BrightnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C748BC136E0C77602CB03D932657C73 /* BrightnessView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		816C39E1118A12A9A2BC41059DAFC42A /* SwiftHSVColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC3A4A4995BE4786CA69A1253529AE /* SwiftHSVColorPicker.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		83484BC03FEC4AF443E6F0591683184E /* SelectedColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7680EFC44E1C8FB0318D2FB1C12F6 /* SelectedColorView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9D56EACC1E8447A04A5C58E878AAB80F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		B80E2A8BD9CCDA2AFB2A6F35ED1EDB12 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F48C962D4244C92C8C21F32773B4A5 /* ColorUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BA1137F204DA20247A92B85655DC1681 /* Pods-PixelAnimGeneratorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A317EBB9F9C69C9FF55EA924BA9159C3 /* Pods-PixelAnimGeneratorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3C462F47EAFD8317B95D9C9C5A2D524 /* SwiftHSVColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2B3EEE9E683895717D6D6B917B71EB5 /* SwiftHSVColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E977A9B4AE2DDDDED4E7A65B97BED33C /* Pods-PixelAnimGenerator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D645F670E81BF7E1E2E08F5FDB039CF /* Pods-PixelAnimGenerator-dummy.m */; };
@@ -258,7 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6491F0F8C9A8BFEA8EDF444CD83845EB /* Build configuration list for PBXNativeTarget "SwiftHSVColorPicker" */;
 			buildPhases = (
-				5A59CD22ABF9A7134FB8A6069FE06D74 /* Sources */,
+				1D3B88E4DBCD4DF46F838FAEC29F0173 /* Sources */,
 				BC0E93467BFEFABAA8C742E8D62A2056 /* Frameworks */,
 				94801E59F366EF3A5B56C34DF13FE444 /* Headers */,
 			);
@@ -344,16 +344,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A59CD22ABF9A7134FB8A6069FE06D74 /* Sources */ = {
+		1D3B88E4DBCD4DF46F838FAEC29F0173 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE429CA12B8BB5FD2CDC99AF47EEB67 /* BrightnessView.swift in Sources */,
-				733ADE22764042D1DC1E57FFFBF550E0 /* ColorUtils.swift in Sources */,
-				604D8318EFD853557B2FADF8EFCF45FC /* ColorWheel.swift in Sources */,
-				1A58C0AF6D1973F3FA5703158E92E97A /* SelectedColorView.swift in Sources */,
-				2881BCDADAEF02E34156E774AB68EF7C /* SwiftHSVColorPicker-dummy.m in Sources */,
-				6E7C27BC35184C82D0CFBBEB023BC31F /* SwiftHSVColorPicker.swift in Sources */,
+				64C95B385C81D8B6F2C28BEBDB5DA8CD /* BrightnessView.swift in Sources */,
+				B80E2A8BD9CCDA2AFB2A6F35ED1EDB12 /* ColorUtils.swift in Sources */,
+				45CFF879DA2292C3BF6467CA0123A692 /* ColorWheel.swift in Sources */,
+				83484BC03FEC4AF443E6F0591683184E /* SelectedColorView.swift in Sources */,
+				240BEC9F8FD2FFC35CD630F959F4CD07 /* SwiftHSVColorPicker-dummy.m in Sources */,
+				816C39E1118A12A9A2BC41059DAFC42A /* SwiftHSVColorPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
