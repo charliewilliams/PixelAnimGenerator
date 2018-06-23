@@ -9,6 +9,8 @@
 import UIKit
 import SwiftHSVColorPicker
 
+let defaultColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+
 class ViewController: UIViewController {
 
     enum InputType: Int {
@@ -78,7 +80,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    var color: UIColor = .white {
+    var color: UIColor! {
         didSet {
             colorSwatch.backgroundColor = color
 
@@ -95,7 +97,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    var colorTable = [UIColor](repeating: .white, count: 256)
+    var colorTable = [UIColor]()
 
     @IBOutlet weak var colorSwatch: UIView!
 
@@ -104,6 +106,12 @@ class ViewController: UIViewController {
     var runTimer: Timer?
     var frames = [[CGFloat]]()
     var touchY: Int?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        color = defaultColor
+    }
 
     func reset() {
 
@@ -140,7 +148,7 @@ class ViewController: UIViewController {
         for (x, frame) in frames.enumerated() {
 
             for (y, pixel) in frame.enumerated() {
-                context.setFillColor(colorTable[Int(pixel * 255)].cgColor)
+                context.setFillColor(colorTable[Int(pixel)].cgColor)
                 context.addRect(CGRect(origin: CGPoint(x: x, y: y), size: onePixelSize))
             }
         }
@@ -191,6 +199,10 @@ class ViewController: UIViewController {
                 return
         }
 
+        if !running {
+            running = true
+        }
+
         let numPixels = CGFloat(self.pixelHeight)
 
         if inputType == .pro,
@@ -208,10 +220,19 @@ class ViewController: UIViewController {
             let mid = fabs(loc1.y - loc2.y)/2 + min(loc1.y, loc2.y)
             touchY = Int(mid / touchView.bounds.height * numPixels)
 
+        } else if inputType == .multi {
+
+            for touch in touches {
+
+                let normalizedForce = touch.force / touch.maximumPossibleForce
+                // todo use force to expand size
+                print(normalizedForce)
+            }
+
         } else {
 
             let location = first.location(in: touchView)
-            touchY = Int(location.y / touchView.bounds.height * numPixels)
+            touchY = Int(numPixels - location.y / touchView.bounds.height * numPixels)
         }
     }
 
@@ -224,7 +245,6 @@ class ViewController: UIViewController {
     }
 
     @objc func colorDidChange(to newColor: UIColor) {
-
         color = newColor
     }
 
