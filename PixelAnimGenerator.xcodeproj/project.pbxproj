@@ -15,6 +15,8 @@
 		C0A697AD20DA9C1300432BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A697AB20DA9C1300432BFC /* LaunchScreen.storyboard */; };
 		C0A697B820DA9C1400432BFC /* PixelAnimGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A697B720DA9C1400432BFC /* PixelAnimGeneratorTests.swift */; };
 		C0A697C320DB019F00432BFC /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A697C220DB019F00432BFC /* ColorPickerViewController.swift */; };
+		C0A697C520DF80E100432BFC /* LinearInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A697C420DF80E100432BFC /* LinearInterpolation.swift */; };
+		C0A697C720DFC59500432BFC /* LinearInterpolationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A697C620DFC59500432BFC /* LinearInterpolationTests.swift */; };
 		DB0E57D6247C42FF78F84332 /* Pods_PixelAnimGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3E6CEDE6AE60674B95BF62 /* Pods_PixelAnimGeneratorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		C0A697B720DA9C1400432BFC /* PixelAnimGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAnimGeneratorTests.swift; sourceTree = "<group>"; };
 		C0A697B920DA9C1400432BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A697C220DB019F00432BFC /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		C0A697C420DF80E100432BFC /* LinearInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearInterpolation.swift; sourceTree = "<group>"; };
+		C0A697C620DFC59500432BFC /* LinearInterpolationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearInterpolationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				C0A697A220DA9C1200432BFC /* AppDelegate.swift */,
 				C0A697A420DA9C1200432BFC /* ViewController.swift */,
 				C0A697C220DB019F00432BFC /* ColorPickerViewController.swift */,
+				C0A697C420DF80E100432BFC /* LinearInterpolation.swift */,
 				C0A697A620DA9C1200432BFC /* Main.storyboard */,
 				C0A697A920DA9C1300432BFC /* Assets.xcassets */,
 				C0A697AB20DA9C1300432BFC /* LaunchScreen.storyboard */,
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				C0A697B720DA9C1400432BFC /* PixelAnimGeneratorTests.swift */,
+				C0A697C620DFC59500432BFC /* LinearInterpolationTests.swift */,
 				C0A697B920DA9C1400432BFC /* Info.plist */,
 			);
 			path = PixelAnimGeneratorTests;
@@ -295,6 +301,7 @@
 				C0A697A520DA9C1200432BFC /* ViewController.swift in Sources */,
 				C0A697A320DA9C1200432BFC /* AppDelegate.swift in Sources */,
 				C0A697C320DB019F00432BFC /* ColorPickerViewController.swift in Sources */,
+				C0A697C520DF80E100432BFC /* LinearInterpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0A697B820DA9C1400432BFC /* PixelAnimGeneratorTests.swift in Sources */,
+				C0A697C720DFC59500432BFC /* LinearInterpolationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

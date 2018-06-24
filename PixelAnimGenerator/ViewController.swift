@@ -165,7 +165,18 @@ class ViewController: UIViewController {
         switch inputType {
 
         case .pen, .pro:
-            return [] // todo
+
+            var frame = [CGFloat]()
+
+            for i in 0..<pixelHeight {
+                let distanceFromTouch = abs(touchY - i)
+                if distanceFromTouch > touchSize {
+                    frame.append(0)
+                }
+                frame.append(distanceFromTouch.lerp(from: 0, to: touchSize, min: 0, max: 255))
+            }
+
+            return frame
 
         case .fade:
             return [CGFloat](repeating: CGFloat(touchY) * touchStepIncrement, count: pixelHeight)
