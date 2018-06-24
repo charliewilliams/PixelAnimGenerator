@@ -150,10 +150,10 @@ class ViewController: UIViewController {
             for (y, pixel) in frame.enumerated() {
                 context.setFillColor(colorTable[Int(pixel)].cgColor)
                 context.addRect(CGRect(origin: CGPoint(x: x, y: y), size: onePixelSize))
+                context.drawPath(using: .fill)
             }
         }
 
-        context.drawPath(using: .fill)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
