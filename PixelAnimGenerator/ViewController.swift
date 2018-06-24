@@ -168,12 +168,12 @@ class ViewController: UIViewController {
 
             var frame = [CGFloat]()
 
-            for i in 0..<pixelHeight {
+            for i in (0..<pixelHeight).reversed() {
                 let distanceFromTouch = abs(touchY - i)
                 if distanceFromTouch > touchSize {
                     frame.append(0)
                 }
-                frame.append(distanceFromTouch.lerp(from: 0, to: touchSize, min: 0, max: 255))
+                frame.append(distanceFromTouch.lerp(from: 0, to: touchSize, out1: 255, out2: 0))
             }
 
             return frame

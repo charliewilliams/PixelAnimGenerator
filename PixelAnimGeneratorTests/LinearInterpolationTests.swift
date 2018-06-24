@@ -12,52 +12,56 @@ import XCTest
 class LinearInterpolationTests: XCTestCase {
     
     func testHalfwayGoingToBiggerRange() {
-        XCTAssertEqual(5.lerp(from: 0, to: 10, min: 0, max: 100), 50)
+        XCTAssertEqual(5.lerp(from: 0, to: 10, out1: 0, out2: 100), 50)
     }
 
     func testHalfwayGoingToSmallerRange() {
-        XCTAssertEqual(50.lerp(from: 0, to: 100, min: 0, max: 10), 5)
+        XCTAssertEqual(50.lerp(from: 0, to: 100, out1: 0, out2: 10), 5)
     }
 
     func testTenPercent() {
-        XCTAssertEqual(1.lerp(from: 0, to: 10, min: 0, max: 100), 10)
+        XCTAssertEqual(1.lerp(from: 0, to: 10, out1: 0, out2: 100), 10)
     }
 
     func testNinetyFivePercent() {
-        XCTAssertEqual(95.lerp(from: 0, to: 100, min: 0, max: 10), 9.5)
+        XCTAssertEqual(95.lerp(from: 0, to: 100, out1: 0, out2: 10), 9.5)
     }
 
     func testClampsByDefault() {
-        XCTAssertEqual(11.lerp(from: 0, to: 10, min: 0, max: 100), 100)
+        XCTAssertEqual(11.lerp(from: 0, to: 10, out1: 0, out2: 100), 100)
     }
 
     func testClampsWhenExplicitlyToldTo() {
-        XCTAssertEqual(11.lerp(from: 0, to: 10, min: 0, max: 100, clamp: true), 100)
+        XCTAssertEqual(11.lerp(from: 0, to: 10, out1: 0, out2: 100, clamp: true), 100)
     }
 
     func testDoesNotClampWhenExplicitlyToldNotTo() {
-        XCTAssertEqual(11.lerp(from: 0, to: 10, min: 0, max: 100, clamp: false), 110, accuracy: 0.00001)
+        XCTAssertEqual(11.lerp(from: 0, to: 10, out1: 0, out2: 100, clamp: false), 110, accuracy: 0.00001)
+    }
+
+    func testReversedOutput() {
+        XCTAssertEqual(1.lerp(from: 0, to: 10, out1: 100, out2: 0), 90)
     }
 
     // TODO support negatives
     
 //    func testNegativeIn() {
-//        XCTAssertEqual(-5.lerp(from: 0, to: -10, min: 0, max: 100), 50)
+//        XCTAssertEqual(-5.lerp(from: 0, to: -10, out1: 0, out2: 100), 50)
 //    }
 //
-//    func testNegativeOut() {
-//        XCTAssertEqual(5.lerp(from: 0, to: 10, min: -100, max: 0), -50)
-//    }
+    func testNegativeOut() {
+        XCTAssertEqual(5.lerp(from: 0, to: 10, out1: -100, out2: 0), -50)
+    }
 //
 //    func testNegativeBoth() {
-//        XCTAssertEqual(-5.lerp(from: -10, to: 0, min: -100, max: 0), -50)
+//        XCTAssertEqual(-5.lerp(from: -10, to: 0, out1: -100, out2: 0), -50)
 //    }
 //
-//    func testClampsNegative() {
-//
-//    }
-//
-//    func testDoesNotClampNegative() {
-//
-//    }
+    func testClampsNegative() {
+        XCTAssertEqual(11.lerp(from: 0, to: 10, out1: 0, out2: -100, clamp: true), -100)
+    }
+
+    func testDoesNotClampNegative() {
+        XCTAssertEqual(11.lerp(from: 0, to: 10, out1: 0, out2: -100, clamp: false), -110, accuracy: 0.00001)
+    }
 }
