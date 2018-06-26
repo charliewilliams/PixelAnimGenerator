@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     enum InputType: Int {
         case pen // touch writes pixels at the touch location, width from touch size slider (autofading)
         case fade // touch Y location controls momentary brightness across all pixels
-        case pro // 2-touch writes pixels at the touches' centre; width controlled by distance between touches
+        case spread // 2-touch writes pixels at the touches' centre; width controlled by distance between touches
         case multi // multiple touches of set width, pressure = brightness & width offset
     }
 
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var touchSizeSlider: UISlider!
     @IBOutlet weak var currentTouchSizeLabel: UILabel!
+    @IBOutlet weak var antialiasSwitch: UISwitch!
     @IBOutlet weak var touchView: UIView!
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var recordSpeedSegmentedControl: UISegmentedControl!
@@ -101,11 +102,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var colorSwatch: UIView!
 
-    var touchSize: Int = 1
     var inputType: InputType = .pen
     var runTimer: Timer?
     var frames = [[CGFloat]]()
     var touchY: Int?
+    var touchSize: Int = 1
+    var multiTouchY = [Int]()
+    var multiTouchSize = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,11 +129,15 @@ class ViewController: UIViewController {
     @objc func runTimerFired() {
 
         // write pixels according to touch location
-        if let touchY = touchY {
+        if inputType == .multi && !multiTouchY.isEmpty {
 
-            frames.append(frameFor(touchY))
+            frames.append(frameForMulti())
+        }
+        else if let touchY = touchY {
 
-        } else {
+            frames.append(frame(for: touchY))
+        }
+        else {
             frames.append(blankFrame)
         }
 
@@ -160,30 +167,57 @@ class ViewController: UIViewController {
         return image
     }
 
-    func frameFor(_ touchY: Int) -> [CGFloat] {
+    func frame(for touchY: Int) -> [CGFloat] {
 
         switch inputType {
 
-        case .pen, .pro:
-
-            var frame = [CGFloat]()
-
-            for i in (0..<pixelHeight).reversed() {
-                let distanceFromTouch = abs(touchY - i)
-                if distanceFromTouch > touchSize {
-                    frame.append(0)
-                }
-                frame.append(distanceFromTouch.lerp(from: 0, to: touchSize, out1: 255, out2: 0))
-            }
-
-            return frame
+        case .pen, .spread:
+            return buildFrame(for: touchY, touchSize: touchSize)
 
         case .fade:
             return [CGFloat](repeating: CGFloat(touchY) * touchStepIncrement, count: pixelHeight)
 
         case .multi:
-            return [] // todo
+            fatalError("Should never get here")
         }
+    }
+
+    func frameForMulti() -> [CGFloat] {
+
+        return zip(multiTouchY, multiTouchSize)
+            .map { buildFrame(for: $0, touchSize: $1) }
+            .reduce(blankFrame) {
+                //                    (prev, this) -> [CGFloat] in
+
+                zip($0, $1).map { $0 + $1 }
+
+                //                    var frame = [CGFloat]()
+                //                    for (index, val) in prev.enumerated() {
+                //                        frame.append(val + this[index])
+                //                    }
+                //                    return frame
+        }
+    }
+
+    private func buildFrame(for touchY: Int, touchSize: Int) -> [CGFloat] {
+
+        var frame = [CGFloat]()
+
+        for i in (0..<pixelHeight).reversed() {
+
+            let distanceFromTouch = abs(touchY - i)
+            if distanceFromTouch >= touchSize {
+                frame.append(0)
+            }
+            else if antialiasSwitch.isOn {
+                frame.append(distanceFromTouch.lerp(from: 0, to: touchSize, out1: 255, out2: 0))
+            } else {
+                frame.append(255)
+            }
+
+        }
+
+        return frame
     }
 
     @IBAction func touchSizeSliderChanged(_ sender: UISlider) {
@@ -216,7 +250,7 @@ class ViewController: UIViewController {
 
         let numPixels = CGFloat(self.pixelHeight)
 
-        if inputType == .pro,
+        if inputType == .spread,
             let first = touches.first,
             let second = touches.dropFirst().first {
 
@@ -233,11 +267,20 @@ class ViewController: UIViewController {
 
         } else if inputType == .multi {
 
+            multiTouchY.removeAll()
+            multiTouchSize.removeAll()
+
             for touch in touches {
 
-                let normalizedForce = touch.force / touch.maximumPossibleForce
-                // todo use force to expand size
-                print(normalizedForce)
+//                let normalizedForce = touch.force / touch.maximumPossibleForce
+//                // todo use force or x position to expand size
+//                print(normalizedForce)
+
+                let loc = touch.location(in: touchView)
+                let normX = Int(loc.x / touchView.bounds.width)
+
+                multiTouchSize.append(touchSize * normX)
+                multiTouchY.append(Int(numPixels - loc.y / touchView.bounds.height * numPixels))
             }
 
         } else {
